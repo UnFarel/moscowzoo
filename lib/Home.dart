@@ -35,7 +35,7 @@ class IndexPageState extends State<IndexPage> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _navigateBottomBar,
-        unselectedItemColor: Color(AppTextColor), selectedItemColor: Color(AppMainColor),
+        unselectedItemColor: Color(AppUnselectedTextColor), selectedItemColor: Color(AppTextColor),
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color(AppSecondColor),

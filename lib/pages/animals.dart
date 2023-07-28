@@ -16,13 +16,13 @@ class _AnimalsPageState extends State<AnimalsPage> {
             fit: BoxFit.cover, width: double.infinity, height: double.infinity),
         Positioned(
             top: 20,
-            left: 125,
+            left: 100,
             child: Row(children: [
               Text(
                 'Животные',
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),
-              SizedBox(width: 60),
+              SizedBox(width: 40),
               IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.search),
