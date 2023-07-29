@@ -42,8 +42,8 @@ class IndexPageState extends State<IndexPage> {
         items: [BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Главная'),
           BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Карта'),
           BottomNavigationBarItem(icon: Icon(Icons.cruelty_free), label: 'Животные'),
-          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'Ещё'),]
-      ),
+          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'Ещё'),],
+      ), resizeToAvoidBottomInset: false,
     );
   }
 }

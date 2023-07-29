@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
+import 'package:moscowzoo/pages/OtherPages/zoo_rules.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OtherPage extends StatefulWidget {
@@ -24,7 +25,7 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Правила зоопарка', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => Rules()))},
             ),
             ListTile(
               title: Text('Экскурсии', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),

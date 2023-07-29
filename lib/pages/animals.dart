@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
+import 'package:moscowzoo/pages/OtherPages/AnimalsPage.dart';
+import 'package:moscowzoo/pages/OtherPages/animalslist.dart';
 
 class AnimalsPage extends StatefulWidget {
   @override
@@ -7,30 +9,95 @@ class AnimalsPage extends StatefulWidget {
 }
 
 class _AnimalsPageState extends State<AnimalsPage> {
+  final controller = TextEditingController();
+  List<Animal> animals = allAnimals;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Stack(children: [
-        Image.asset('assets/images/bg.jpg',
-            fit: BoxFit.cover, width: double.infinity, height: double.infinity),
-        Positioned(
-            top: 20,
-            left: 100,
-            child: Row(children: [
-              Text(
-                'Животные',
-                style: TextStyle(color: Colors.white, fontSize: 30),
+            appBar: AppBar(
+              title: Text(
+                'Наши Животные',
+                textAlign: TextAlign.center,
               ),
-              SizedBox(width: 40),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search),
-                color: Colors.white,
-                iconSize: 40,
+              centerTitle: true,
+              backgroundColor: Color(AppMainColor),
+            ),
+            body: Stack(children: [
+              Image.asset('assets/images/bg.jpg',
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity),
+              Column(
+                children: <Widget>[
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    child: TextField(
+                      controller: controller,
+                      style: TextStyle(
+                        color: Color(AppTextColor),
+                      ),
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(AppTextColor),
+                            ),
+                            borderRadius: BorderRadius.circular(20)),
+                        prefixIcon: const Icon(Icons.search),
+                        prefixIconColor: Color(AppTextColor),
+                        hintText: "У нас много животных, кого ищещь ты?",
+                        hintStyle: TextStyle(
+                          color: Color(AppTextColor),
+                          fontSize: 14,
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color(AppTextColor)),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      onChanged: searchAnimal,
+                    ),
+                  ),
+                  Expanded(
+                      child: ListView.builder(
+                          itemCount: animals.length,
+                          itemBuilder: (context, index) {
+                            final animal = animals[index];
+
+                            return ListTile(
+                              leading: Image.network(
+                                animal.urlImage,
+                                fit: BoxFit.cover,
+                                width: 50,
+                                height: 50,
+                              ),
+                              title: Text(
+                                animal.species,
+                                style: TextStyle(color: Color(AppTextColor)),
+                              ),
+                              onTap: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            AnimalInfo(animal: animal)))
+                              },
+                            );
+                          }))
+                ],
               )
-            ]))
-      ]),
-    ));
+            ])));
+  }
+
+  void searchAnimal(String query) {
+    final suggestions = allAnimals.where((animal) {
+      final animal_species = animal.species.toLowerCase();
+      final input = query.toLowerCase();
+
+      return animal_species.contains(input);
+    }).toList();
+
+    setState(() => animals = suggestions);
   }
 }
