@@ -40,7 +40,7 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Виртуальный тур', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => launch('https://moscowzoo.ru/vtour/'),
             ),
             ListTile(
               title: Text('Библиотека зоопарка', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
@@ -55,7 +55,7 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Помочь зоопарку', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => launch('https://moscowzoo.ru/about-zoo/donats/'),
             ),
             ListTile(
               title: Text('Контакты', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
