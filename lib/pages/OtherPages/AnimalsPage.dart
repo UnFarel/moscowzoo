@@ -26,22 +26,50 @@ class AnimalInfo extends StatelessWidget {
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity),
-          Column(
-            children: [
-              Image.network(
-                animal.urlImage,
-                width: double.infinity,
-                height: 300,
-                fit: BoxFit.cover,
-              ),
-              Text(
-                animal.description,
-                style: TextStyle(
-                  color: Color(AppTextColor),
+          SingleChildScrollView(
+            padding: EdgeInsets.all(12),
+            child: Column(
+              children: [
+                Image.network(
+                  animal.urlImage,
+                  width: double.infinity,
+                  height: 300,
+                  fit: BoxFit.cover,
                 ),
-              )
-            ],
-          ),
+                SizedBox(height: 20),
+                Text(
+                  animal.description,
+                  style: TextStyle(
+                      color: Color(AppTextColor),
+                      fontSize: 20
+                  ),
+                ),
+                SizedBox(height: 20),
+                Image.network(
+                  animal.location,
+                  width: double.infinity,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(height: 20),
+                Text(
+                  animal.location_text,
+                  style: TextStyle(
+                      color: Color(AppTextColor),
+                      fontSize: 20
+                  ),
+                ),
+                SizedBox(height: 20),
+                Text(
+                  animal.next_text,
+                  style: TextStyle(
+                      color: Color(AppTextColor),
+                      fontSize: 20
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
