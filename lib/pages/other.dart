@@ -3,6 +3,8 @@ import 'package:moscowzoo/const.dart';
 import 'package:moscowzoo/pages/OtherPages/zoo_rules.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'OtherPages/Contacts.dart';
+
 class OtherPage extends StatefulWidget {
   @override
   State<OtherPage> createState() => _OtherPageState();
@@ -60,7 +62,7 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Контакты', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => ContactsPage()))},
             ),
           ],
         )
