@@ -13,9 +13,12 @@ class MapPage extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              Image.asset(
-                'assets/images/zoomapnew.jpg', // Замените на путь к вашему изображению в папке assets
-                fit: BoxFit.fitHeight,
+              InteractiveViewer(
+                maxScale: 3,
+                child: Image.asset(
+                  'assets/images/zoomapnew.jpg',
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ],
           ),

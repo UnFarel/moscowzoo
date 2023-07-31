@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
+import 'package:moscowzoo/pages/OtherPages/Education.dart';
+import 'package:moscowzoo/pages/OtherPages/Expositions.dart';
+import 'package:moscowzoo/pages/OtherPages/Library.dart';
+import 'package:moscowzoo/pages/OtherPages/excursions.dart';
 import 'package:moscowzoo/pages/OtherPages/zoo_rules.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,12 +36,12 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Экскурсии', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => ExcursionsPage()))},
             ),
             ListTile(
               title: Text('Экспозиции', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => ExpositionsPage()))},
             ),
             ListTile(
               title: Text('Виртуальный тур', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
@@ -47,12 +51,12 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Библиотека зоопарка', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryPage()))},
             ),
             ListTile(
               title: Text('Образование', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => launch('https://moscowzoo.ru/for-visitors/rules-zoo/'),
+              onTap: () => () => {Navigator.push(context, MaterialPageRoute(builder: (context) => EducationPage()))},
             ),
             ListTile(
               title: Text('Помочь зоопарку', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),

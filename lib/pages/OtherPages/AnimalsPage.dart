@@ -61,7 +61,7 @@ class AnimalInfo extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  animal.next_text,
+                  animal.description_continuation,
                   style: TextStyle(
                       color: Color(AppTextColor),
                       fontSize: 20

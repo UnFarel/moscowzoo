@@ -9,6 +9,8 @@ const int AppSecondColor = 0xFF25545C;
 const int AppUnselectedTextColor = 0xFFC1C1C1;
 const int AppTextColor = 0xFFFFFFFF;
 
+final String number = "+74992555375";
+
 // onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => Rules()))},
 
 const String Rules_text = '''
