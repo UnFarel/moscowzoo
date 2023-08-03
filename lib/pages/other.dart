@@ -56,7 +56,7 @@ class _OtherPageState extends State<OtherPage> {
             ListTile(
               title: Text('Образование', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => () => {Navigator.push(context, MaterialPageRoute(builder: (context) => EducationPage()))},
+              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => EducationPage()))},
             ),
             ListTile(
               title: Text('Помочь зоопарку', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),

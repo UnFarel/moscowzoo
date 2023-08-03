@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../const.dart';
+
 class ExpositionsPage extends StatefulWidget {
   const ExpositionsPage({super.key});
 
@@ -12,9 +14,19 @@ class _ExpositionsPageState extends State<ExpositionsPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: Text('Экспозиции'),
-          )),
+          appBar: AppBar(
+            title: Text(
+              'Экспозиции',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(AppTextColor)),
+            ),
+            centerTitle: true,
+            backgroundColor: Color(AppMainColor),
+          ),
+          body: Stack(children: [
+            Image.asset('assets/images/bg.jpg',
+                fit: BoxFit.cover, width: double.infinity, height: double.infinity),
+          ],)),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../const.dart';
+
 class EducationPage extends StatefulWidget {
   const EducationPage({super.key});
 
@@ -12,9 +14,19 @@ class _EducationPageState extends State<EducationPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: Center(
-            child: Text('Образование'),
-          )),
+          appBar: AppBar(
+            title: Text(
+              'ОБразование',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color(AppTextColor)),
+            ),
+            centerTitle: true,
+            backgroundColor: Color(AppMainColor),
+          ),
+          body: Stack(children: [
+            Image.asset('assets/images/bg.jpg',
+                fit: BoxFit.cover, width: double.infinity, height: double.infinity),
+          ],)),
     );
   }
 }
