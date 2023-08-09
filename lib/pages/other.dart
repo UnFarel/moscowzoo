@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
-import 'package:moscowzoo/pages/OtherPages/Education.dart';
 import 'package:moscowzoo/pages/OtherPages/Expositions.dart';
 import 'package:moscowzoo/pages/OtherPages/Library.dart';
 import 'package:moscowzoo/pages/OtherPages/excursions.dart';
@@ -52,11 +51,6 @@ class _OtherPageState extends State<OtherPage> {
               title: Text('Библиотека зоопарка', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
               trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
               onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => LibraryPage()))},
-            ),
-            ListTile(
-              title: Text('Образование', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),
-              trailing: Icon(Icons.arrow_forward_ios_sharp, color: Color(AppTextColor)),
-              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => EducationPage()))},
             ),
             ListTile(
               title: Text('Помочь зоопарку', style: TextStyle(color: Color(AppTextColor), fontSize: 18)),

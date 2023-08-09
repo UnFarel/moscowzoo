@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
 import 'package:moscowzoo/pages/OtherPages/AnimalsPage.dart';
@@ -18,7 +21,7 @@ class _AnimalsPageState extends State<AnimalsPage> {
         home: Scaffold(
             appBar: AppBar(
               title: Text(
-                'Наши Животные',
+                'Наши животные',
                 textAlign: TextAlign.center,
               ),
               centerTitle: true,
@@ -64,25 +67,21 @@ class _AnimalsPageState extends State<AnimalsPage> {
                           itemCount: animals.length,
                           itemBuilder: (context, index) {
                             final animal = animals[index];
-
+                            Uint8List avatar = base64Decode(animal.Image);
                             return ListTile(
-                              leading: Image.network(
-                                animal.urlImage,
-                                fit: BoxFit.cover,
-                                width: 50,
-                                height: 50,
-                              ),
+                              contentPadding: EdgeInsets.symmetric(vertical: 5),
+                            leading: ClipRRect(borderRadius: BorderRadius.circular(90), child: Image.memory(
+                                avatar,
+                                fit: BoxFit.fill,
+                                width: 64,
+                                height: 64,
+                              ),),
+                              visualDensity: VisualDensity(vertical: 4),
                               title: Text(
                                 animal.species,
-                                style: TextStyle(color: Color(AppTextColor)),
+                                style: TextStyle(color: Color(AppTextColor), fontSize: 20),
                               ),
-                              onTap: () => {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            AnimalInfo(animal: animal)))
-                              },
+                              onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => AnimalInfo(animal: animal)))},
                             );
                           }))
                 ],

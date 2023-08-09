@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/pages/OtherPages/animalslist.dart';
 
@@ -10,6 +13,8 @@ class AnimalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Uint8List main_photo = base64Decode(animal.Image);
+    Uint8List animal_location = base64Decode(animal.location_photo);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -27,46 +32,48 @@ class AnimalInfo extends StatelessWidget {
               width: double.infinity,
               height: double.infinity),
           SingleChildScrollView(
-            padding: EdgeInsets.all(12),
             child: Column(
               children: [
-                Image.network(
-                  animal.urlImage,
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.cover,
+                Image.memory(
+                  main_photo,
+                  width: MediaQuery.sizeOf(context).width,
+                  fit: BoxFit.fill,
                 ),
-                SizedBox(height: 20),
-                Text(
-                  animal.description,
-                  style: TextStyle(
-                      color: Color(AppTextColor),
-                      fontSize: 20
+                Padding(padding: EdgeInsets.all(12), child: Column(children: [
+                  SizedBox(height: 20),
+                  Text(
+                    animal.description,
+                    style: TextStyle(
+                        color: Color(AppTextColor),
+                        fontSize: 20
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Image.network(
-                  animal.location,
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.cover,
-                ),
-                SizedBox(height: 20),
-                Text(
-                  animal.location_text,
-                  style: TextStyle(
-                      color: Color(AppTextColor),
-                      fontSize: 20
+                  SizedBox(height: 20),
+                  Center(child: animal_location != null
+                      ? Image.memory(
+                    animal_location,
+                    width: double.infinity,
+                    height: 300,
+                    fit: BoxFit.cover,)
+                      : Text('Изображение локации пока отсутствует', style: TextStyle(color: Color(AppTextColor), fontSize: 20),)
                   ),
-                ),
-                SizedBox(height: 20),
-                Text(
-                  animal.description_continuation,
-                  style: TextStyle(
-                      color: Color(AppTextColor),
-                      fontSize: 20
+                  SizedBox(height: 20),
+                  Text(
+                    animal.location_text,
+                    style: TextStyle(
+                        color: Color(AppTextColor),
+                        fontSize: 20
+                    ),
                   ),
-                )
+                  SizedBox(height: 20),
+                  Text(
+                    animal.description_continuation,
+                    style: TextStyle(
+                        color: Color(AppTextColor),
+                        fontSize: 20
+                    ),
+                  )
+                ],),)
               ],
             ),
           )

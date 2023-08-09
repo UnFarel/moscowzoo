@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:map_launcher/map_launcher.dart';
 import '../../const.dart';
 
 class ContactsPage extends StatefulWidget {
@@ -35,7 +36,7 @@ class _ContactsPageState extends State<ContactsPage> {
                   Container(
                     width: MediaQuery.sizeOf(context).width,
                     child: InkWell(
-                      child: Image.asset('assets/images/yzndex_zoo.png'),
+                      child: Image.asset('assets/images/yandex_zoo.png'),
                       onTap: () => launch(zoo_location_link),
                     ),
                   ),
