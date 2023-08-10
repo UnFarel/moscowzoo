@@ -48,12 +48,12 @@ class _ExcursionsPageState extends State<ExcursionsPage> {
                               children: [
                                 Text(
                               zoo.excursion_title,
-                              style: TextStyle(color: Color(AppTextColor), fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.left,
+                              style: TextStyle(color: Color(AppTextColor), fontWeight: FontWeight.bold, fontSize: 24),
+                              textAlign: TextAlign.center,
                                 ),
-                                SizedBox(height: 20),
+                                SizedBox(height: 10),
                               Row(children: [
-                                Container(child: ClipRRect(borderRadius: BorderRadius.circular(90), child: Image.network(zoo.excursion_image, fit: BoxFit.cover, height: 70, width: 70),)),
+                                Container(child: ClipRRect(borderRadius: BorderRadius.circular(90), child: Image.asset(zoo.excursion_image, fit: BoxFit.cover, height: 70, width: 70),)),
                                 SizedBox(width: 20),
                                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                                 Row(children: [Icon(Icons.people, color: Color(AppTextColor),), SizedBox(width: 8), Text(

@@ -138,8 +138,8 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(color: Colors.white, fontSize: 20))],),
                   );
                 } else if (snapshot.hasError) {
-                  return Text('Ошибка: ${snapshot.error}',
-                      style: TextStyle(color: Colors.white, fontSize: 18));
+                  return Text('Нет одключения к интернету или включен vpn', textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 24));
                 } else if (snapshot.hasData) {
                   List<String> newsTitles = snapshot.data![0];
                   List<String> newsLinks = snapshot.data![1];
@@ -151,8 +151,8 @@ class _HomePageState extends State<HomePage> {
                     newsPhotos: newsPhotos,
                   );
                 } else {
-                  return Text('Нет одключения к интернету или включен vpn',
-                      style: TextStyle(color: Colors.white, fontSize: 18));
+                  return Text('Нет одключения к интернету или включен vpn', textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 24));
                 }
               },
             ),
