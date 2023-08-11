@@ -75,7 +75,7 @@ class _ContactsPageState extends State<ContactsPage> {
                                 thickness: 1,
                               ),
                               SizedBox(height: 16),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Для справок',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -83,9 +83,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+74992522951',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+74992522951'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text(
                                     'Дни рождения, познавательно-развлекательные программы',
                                     textAlign: TextAlign.center,
@@ -95,9 +95,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+74992555763',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+74992555763')),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Арт-Зебра',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -105,9 +105,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+79672110984',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+79672110984'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Детский лагерь «ЗооМастерские»',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -115,9 +115,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+74992555763',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+74992555763'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Центр воспроизводства',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -125,9 +125,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+79629713245',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+79629713245'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Для заказа экскурсий',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -135,7 +135,7 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('+74992555375',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('tel:+74992555375'),),
                               SizedBox(height: 12),
                             ],
                           ),
@@ -159,7 +159,7 @@ class _ContactsPageState extends State<ContactsPage> {
                                 thickness: 1,
                               ),
                               SizedBox(height: 16),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Пресс-служба',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -167,9 +167,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('b.saraliev@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:b.saraliev@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Для волонтеров',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -177,9 +177,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('volonter@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:volonter@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('По вопросам опекунства',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -187,9 +187,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('zoofriends@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:zoofriends@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text(
                                     'По вопросам сотрудничества и реализации спонсорских и благотворительных программ',
                                     textAlign: TextAlign.center,
@@ -199,9 +199,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('partnership@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:partnership@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text(
                                     'Дежурно-диспетчерская служба (по вопросам оповещения)',
                                     textAlign: TextAlign.center,
@@ -211,9 +211,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('pcn@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:pcn@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Администрация',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -221,9 +221,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('zoopark@culture.mos.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]),onTap: () => launch('mailto:zoopark@culture.mos.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Для заказа экскурсий',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -231,9 +231,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('education@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:education@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Центр воспроизводства',
                                     style: TextStyle(
                                         fontSize: 20,
@@ -241,9 +241,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('info@moscowzoo.center',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:info@moscowzoo.center'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('По вопросам приобретения животных',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -252,9 +252,9 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('m.galeshchuk@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:m.galeshchuk@moscowzoo.ru'),),
                               SizedBox(height: 12),
-                              Column(children: [
+                              InkWell(child: Column(children: [
                                 Text('Клуб Друзей Московского зоопарка',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -263,7 +263,7 @@ class _ContactsPageState extends State<ContactsPage> {
                                 Text('zoofriends@moscowzoo.ru',
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.yellow))
-                              ]),
+                              ]), onTap: () => launch('mailto:zoofriends@moscowzoo.ru'),),
                               SizedBox(height: 12),
                             ],
                           ),
