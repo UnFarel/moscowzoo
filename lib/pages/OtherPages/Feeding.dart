@@ -105,8 +105,7 @@ class _FeedingPageState extends State<FeedingPage> {
                       separatorBuilder: (context, index) => Divider(),
                       itemBuilder: (context, index) {
                         return ListTile(
-                          title: Text(myListItems[dayofWeek][index], style: TextStyle(color: Color(AppTextColor), fontSize: 16),),
-                          leading: Icon(Icons.arrow_right, color: Color(AppTextColor),),
+                          title: Text(myListItems[dayofWeek][index], style: TextStyle(color: Color(AppTextColor), fontSize: 20),),
                         );
                       },
                     );
