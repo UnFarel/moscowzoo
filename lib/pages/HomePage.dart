@@ -201,19 +201,25 @@ class NewsCarouselWidget extends StatelessWidget {
                 height: MediaQuery.sizeOf(context).height,
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.black.withOpacity(0.4)),
               ),
-              Padding(padding: EdgeInsets.symmetric(horizontal: MediaQuery.sizeOf(context).width * 0.03), child: Column(
+              Column(
                 children: [
-                  SizedBox(
-                    height: MediaQuery.sizeOf(context).height * 0.14,
-                  ),
-                  Text(
-                    newsTitles[index],
+                  Container(alignment: Alignment.center, child: Text(
+                    'НОВОСТИ',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                     overflow: TextOverflow.ellipsis,
+                  ),),
+                  SizedBox(
+                    height: MediaQuery.sizeOf(context).height * 0.12,
                   ),
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: Container(alignment: Alignment.center, child: Text(
+                    newsTitles[index].toUpperCase(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                    overflow: TextOverflow.ellipsis,
+                  ),),)
                 ],
-              )),
+              ),
               GestureDetector(child: Container(
                 width: MediaQuery.sizeOf(context).width,
                 height: MediaQuery.sizeOf(context).height,
