@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:moscowzoo/pages/OtherPages/animalslist.dart';
+import 'package:moscowzoo/pages/OtherPages/animalList.dart';
 
 import '../../const.dart';
 

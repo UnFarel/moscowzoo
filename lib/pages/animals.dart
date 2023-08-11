@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:moscowzoo/const.dart';
 import 'package:moscowzoo/pages/OtherPages/AnimalsPage.dart';
-import 'package:moscowzoo/pages/OtherPages/animalslist.dart';
+import 'package:moscowzoo/pages/OtherPages/animalList.dart';
 
 class AnimalsPage extends StatefulWidget {
   @override
